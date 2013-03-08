@@ -16,4 +16,7 @@
 	$randomdb='randomdb';
 	$randomdb_random='random';
 	$randomdb_user='username';
+	$mobiledb='mobile';
+	$mobiledb_device='device';
+	$mobiledb_user='username';
 ?>

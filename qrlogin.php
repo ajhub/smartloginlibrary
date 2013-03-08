@@ -34,5 +34,5 @@
 		die('Error: ' . mysql_error());
   	}
 	mysql_close($con);
-//	header("refresh:5,process.php");
+	header("refresh:5,process.php");
 ?>
