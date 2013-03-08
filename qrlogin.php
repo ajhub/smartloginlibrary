@@ -1,10 +1,10 @@
 <html>
 <head>
 	<title>
-		QR Based Login
+	  QR Based Login
 	</title>
 	<?php
-		require("config.php");
+		require("smartloginlibrary/config.php");
 		echo $ico_loc;
 	?>
 </head>

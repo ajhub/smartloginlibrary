@@ -12,7 +12,7 @@
 	$db=mysql_select_db($SqlDBname,$con);
 	if(!$db)
 		die("Error in db delection..");
-	$ico_loc='<link rel="shortcut icon"  href="/favicon.ico">';
+	$ico_loc='<link rel="shortcut icon"  href="/smartloginlibrary/favicon.ico">';
 	$randomdb='randomdb';
 	$randomdb_random='random';
 	$randomdb_user='username';
