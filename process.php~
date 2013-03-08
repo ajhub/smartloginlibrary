@@ -4,7 +4,7 @@
       Processing.....
     </title>
 	<?php
-		require("config.php");
+		require("smartloginlibrary/config.php");
 		echo $ico_loc;
 	?>
   </head>
