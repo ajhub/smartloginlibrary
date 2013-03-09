@@ -4,11 +4,10 @@
       Processing.....
     </title>
 	<?php
-		require("smartloginlibrary/config.php");
+		require("config.php");
 		echo $ico_loc;
 	?>
   </head>
-welcome to process.php
 </html>
 
 <?php
@@ -21,41 +20,41 @@ welcome to process.php
 	{
 		sleep(1);
 		$count++;
-		$query = " SELECT * FROM ".$randomdb." WHERE ".$randomdb_random." = '$random' ";
+		$query = " SELECT * FROM randomdb WHERE random = '$random' ";
 		$result=mysql_query($query,$con);
 		if(!$result)
 			die("Connection Error");
 		else
 		{
 			$row = mysql_fetch_array($result);
-			$username = $row[$randomdb_user];
-			if($username!=NULL)
+			$username = $row['username'];
+			if($username!=null)
 			{
 				$status=1;
-				$username = $row[$randomdb_user]; 
+				$username = $row['username']; 
 		    	}
 		 }
 	}
 
 	if($status==1)		
 	{
-		$query = " SELECT * FROM ".$mobiledb." WHERE "$mobiledb_user. "= '$username' ";
+		$query = " SELECT * FROM mobiledb WHERE username = '$username' ";
 		$result=mysql_query($query,$con);
 		if(!$result)
 			die("Connection Error");
 		else
 		{
 			$row = mysql_fetch_array($result);
-			$_SESSION['username'] = $row[$mobiledb_user];
+			$_SESSION['username'] = $row['username'];
 		}
-//		header("refresh:1,login.php");	
+		header("refresh:1,login.php");	
 	}
 	else
 	{
 			$_SESSION['$random']=$random;
-			$query = " DELETE FROM ".$randomdb. "WHERE "$randomdb_random "= '$random' ";
+			$query = " DELETE FROM randomdb WHERE random = '$random' ";
 	    		$result=mysql_query($query,$con);
-//			header("refresh:1,offline.php");	
+			header("refresh:1,offline.php");	
 	}	
 ?>
 	

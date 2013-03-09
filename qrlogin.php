@@ -3,8 +3,9 @@
 	<title>
 	  QR Based Login
 	</title>
-	<?php
-		require("config.php");
+	<?php	
+	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+	require("config.php");
 		echo $ico_loc;
 	?>
 </head>

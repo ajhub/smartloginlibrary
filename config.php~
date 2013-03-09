@@ -1,9 +1,9 @@
-<?php	
-	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);	
+<?php
 	$SqlHost='localhost';
 	$SqlUser='root';
 	$SqlPass='suprit12';
 	$SqlDBname='smartlogin';
+	$SqlCon=mysql_connect($SqlHost,$SqlUser,$SqlPass,$SqlDBname);
 	$con=mysql_connect($SqlHost,$SqlUser,$SqlPass);
 	if(!$con)
 	{
@@ -16,10 +16,7 @@
 	$randomdb='randomdb';
 	$randomdb_random='random';
 	$randomdb_user='username';
-	$mobiledb='mobiledb';
+	$mobiledb='mobile';
 	$mobiledb_device='device';
 	$mobiledb_user='username';
-	$logindb='logindb';
-	$logindb_user='username';
-	$logindb_pass='password';
 ?>
