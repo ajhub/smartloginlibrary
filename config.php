@@ -2,12 +2,12 @@
 	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);	
 	
 	// Enter your mysql connection credentials here
-	$SqlHost = 'localhost';
-	$SqlUser = 'root';
-	$SqlPass = 'suprit12';
+	$SqlHost = '<path>';
+	$SqlUser = '<user>';
+	$SqlPass = '<password>';
 	
 	// Enter your mysql database name here
-	$SqlDBname='smartlogin';
+	$SqlDBname='<dbname>';
 	
 	//Making connections and selecting your db for furhter operations.
 	$con=mysql_connect($SqlHost,$SqlUser,$SqlPass);
@@ -26,17 +26,17 @@
     // Set following variables to your db's table, which will store random nos and usernames
 	// See step ** for more details.
 	
-	$randomdb = 'randomdb';
-	$randomdb_random = 'random';
-	$randomdb_user = 'username';
+	$randomdb = '<tablenamefor random nos>';
+	$randomdb_random = '<fieldnamefor random no>';
+	$randomdb_user = '<fieldnamefor username>';
 	
 	
 	// Set following variables to your db's table, which will store devices registered by users.
 	// See step ** for more details.
 	
-	$mobiledb = 'mobiledb';
-	$mobiledb_device = 'device';
-	$mobiledb_user = 'username';
+	$mobiledb = '<tablenamefor deviceids>';
+	$mobiledb_device = '<fieddnamefor device id>';
+	$mobiledb_user = '<fieldnamefor username>';
 	
 	
 	// Set following variables to your db's table, which stores usernames and passswords
