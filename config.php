@@ -36,8 +36,8 @@
 	
 	$mobiledb = 'mobiledb';
 	$mobiledb_device = 'device';
+	$mobiledb_key = 'key' ;	
 	$mobiledb_user = 'username';
-	
 	
 	// Set following variables to your db's table, which stores usernames and passswords
 	$logindb = '<tablenamefor websites username,passwords>';
