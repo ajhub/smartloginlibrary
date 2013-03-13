@@ -1,17 +1,29 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>
-	  QR Based Login
-	</title>
-	<?php	
-	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-	require("config.php");
-		echo $ico_loc;
-	?>
+    <title>SmartLogin</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>	
 </head>
-</html>
+
+<body style="background:white;">
+
+<div style="container">
+
+		<div class="hero-unit" style="margin-top : 20px;margin-left:15%; margin-right:15%;">
+					
+					<h1>Smart<text style="color:#1E90FF;">Login</h1>
+					    <br>
+						<p>
+						Scan this QR code with SmartLogin Mobile App. Incase your smartphone is not connected to internet, you will be redirected to input the otp key.
+						</p>
+						<br><br>
+						<center>
 
 <?php
+
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+		require("config.php");
+		
 	session_start();
 	$validCharacters = "abcdefghijklmnopqrstuxyvwzABCDEFGHIJKLMNOPQRSTUXYVWZ0123456789";
 	$validCharNumber=strlen($validCharacters);
@@ -37,3 +49,14 @@
 	mysql_close($con);
 	header("refresh:5,process.php");
 ?>
+
+						</center>
+					
+		</div>     
+	
+</div>
+
+
+</body>
+</html>
+
