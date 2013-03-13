@@ -24,12 +24,11 @@
 	if($num == 1)
 	{
 		$output = array('status' => $secretkey);
-		$query = mysql_query("UPDATE ".$mobiledb." SET ".$mobiledb_device." = '$deviceid' WHERE ".$mobiledb_user." = '$username'");
-		$query = mysql_query("UPDATE ".$mobiledb." SET ".$mobiledb_key." = '$secretkey' WHERE ".$mobiledb_user." = '$username'");
+		$query = mysql_query("INSERT INTO ".$mobiledb." (`".$mobiledb_user."`, `".$mobiledb_device."`, `".$mobiledb_key."`) VALUES ('$username', '$deviceid', '$secretkey');");
 	}
 	else
 	{
-		$output = array('status' => "OK");
+		$output = array('status' => "NOOK");
 	}
 	echo json_encode($output);
 	mysql_close();
