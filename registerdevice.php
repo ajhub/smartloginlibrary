@@ -3,10 +3,20 @@
 	
 	require("config.php");
 	
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$deviceid = $_POST['deviceid'];
+	$username = "ajinkya";
+	$en_username
+	//$password = $_POST['password'];
+	//$deviceid = $_POST['deviceid'];
 	
+	private $iv = 'fedcba9876543210'; #Same as in JAVA
+    private $key = '0123456789abcdef'; #Same as in JAVA
+	
+	$mode = "cbc";
+	$en_username mcrypt_encrypt ( 'rijndael-128' , $key , $username , $mode , $iv );
+	$username mcrypt_decrypt ( 'rijndael-128', $key , $en_username , $mode , $iv );
+	
+	echo username;
+	/*
 	$query = mysql_query("SELECT * FROM ".$logindb." WHERE ".$logindb_user." = '$username' AND ".$logindb_pass." = '$password'");
 	$num = mysql_num_rows($query);
 	
@@ -32,4 +42,7 @@
 	}
 	echo json_encode($output);
 	mysql_close();
-?>	   
+*/
+	
+	
+	?>	   
