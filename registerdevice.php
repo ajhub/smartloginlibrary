@@ -42,13 +42,16 @@
 	{
             $index = mt_rand(0, $validCharNumber-1);
             $secretkey .= $validCharacters[$index];
-        }
+    }
 
 	if($num == 1)
 	{
-		$output = array('status' => $secretkey);
+		
 		$query = mysql_query("INSERT INTO ".$mobiledb." (`".$mobiledb_user."`, `".$mobiledb_device."`, `".$mobiledb_key."`) VALUES ('$username', '$deviceid', '$secretkey');");
-
+		if(!$query)
+			$output = array('status' => "NOOK");
+		else
+			$output = array('status' => $secretkey);
 	}
 	else
 	{
