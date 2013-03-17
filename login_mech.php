@@ -1,13 +1,22 @@
 <html>
 <head>
 	<title>
-	Lgin Mechanism Here
+	Abra ka dabra..!!
 	</title>
-	<?php	
+	</head>
+</html>
+
+<?php	
 	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 	require("config.php");
-		echo $ico_loc;
-	?>
-</head>
-</html>
+		
+		session_start();
+		
+		//Place your login mechanism over here, the username is provided in the variable below..
+		 $username=$_SESSION['username'];
+		
+		
+		
+?>
+
 

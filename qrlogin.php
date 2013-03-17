@@ -10,7 +10,7 @@
 <div style="container">
 
 		<div class="hero-unit" style="margin-top : 20px;margin-left:15%; margin-right:15%;">
-					
+
 					<h1>Smart<text style="color:#1E90FF;">Login</h1>
 					    <br>
 						<p>
@@ -23,7 +23,7 @@
 
     error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 		require("config.php");
-		
+
 	session_start();
 	$validCharacters = "abcdefghijklmnopqrstuxyvwzABCDEFGHIJKLMNOPQRSTUXYVWZ0123456789";
 	$validCharNumber=strlen($validCharacters);
@@ -36,7 +36,7 @@
         }
 	$_SESSION['$random']=$result;
 	generateQRwithGoogle($result);
-	function generateQRwithGoogle($url,$widthHeight ='150',$EC_level='L',$margin='0') 
+	function generateQRwithGoogle($url,$widthHeight ='200',$EC_level='L',$margin='0') 
 	{
 	        $url = urlencode($url);
 		echo '<img src="http://chart.apis.google.com/chart?chs='.$widthHeight.'x'.$widthHeight.'&cht=qr&chld='.$EC_level.'|'.$margin.'&chl='.$url.'" " widthHeight="'.$widthHeight.'" widthHeight="'.$widthHeight.'"/>';
@@ -59,4 +59,3 @@
 
 </body>
 </html>
-
