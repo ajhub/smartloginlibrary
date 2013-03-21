@@ -25,6 +25,7 @@
 		require("config.php");
 
 	session_start();
+	
 	$validCharacters = "abcdefghijklmnopqrstuxyvwzABCDEFGHIJKLMNOPQRSTUXYVWZ0123456789";
 	$validCharNumber=strlen($validCharacters);
 	$length = 6;
