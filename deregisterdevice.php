@@ -10,4 +10,8 @@
 			$output = array('status' => "NOOK");
 		else
 			$output = array('status' => "OK");
+			
+
+	echo json_encode($output);
+	mysql_close();
 ?>
